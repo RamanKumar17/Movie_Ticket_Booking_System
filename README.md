@@ -4,6 +4,7 @@
 ## Overview
 
 The Movie Booking System is a console-based application developed in Core Java with JDBC for MySQL database connectivity. It allows users to book movie tickets, make payments, and receive ticket receipts via email. The system also provides admin functionalities such as managing movies, theaters, and viewing transaction details.
+## Backend
 
 ## Key Features
 
@@ -82,8 +83,37 @@ The Movie Booking System is a console-based application developed in Core Java w
 ![Coupon Code Dempo](Screenshots/CouponCode.png)
 
 - ModeOfPayment
+
+  #Frontend
+
+  # Project Frontend
+
+Welcome to Movie_Ticket_Booking_System Frontend!
+
+## Overview
+
+This frontend repository serves as the user interface component of Movie_Ticket_Booking_System. It's built with HTML, CSS & JavaScript providing a seamless and intuitive experience for users interacting with our application.
+
+## Features
+
+- Login Page (Admin/User)
+- Admin's Control PAge
+- Movie Selection Page
+- Payment Page
+
+## ScreenShots
+
+- LoginPage
   
-![Mode Of Payment Dempo](Screenshots/ModeOfPayment.png)
+![Ticket Booked Dempo](Screenshots/TicketBooked.png)
+
+- LoginPage
+  
+![Ticket Booked Dempo](Screenshots/TicketBooked.png)
+
+- LoginPage
+  
+![Ticket Booked Dempo](Screenshots/TicketBooked.png)
 
 - LoginPage
   

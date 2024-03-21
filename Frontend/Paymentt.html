@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie Ticket Booking - Payment</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    select, input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Payment</h2>
+    <form id="paymentForm">
+        <label for="paymentMode">Select Payment Mode:</label>
+        <select id="paymentMode" name="paymentMode" onchange="showPaymentOptions()">
+            <option value="cash">Cash</option>
+            <option value="upi">UPI</option>
+            <option value="online">Online</option>
+        </select>
+
+        <div id="upiDetails" style="display: none;">
+            <label for="upiID">Enter UPI ID:</label>
+            <input type="text" id="upiID" name="upiID" placeholder="Enter UPI ID">
+        </div>
+
+        <div id="onlinePaymentOptions" style="display: none;">
+            <label for="onlinePaymentMethod">Select Online Payment Method:</label>
+            <select id="onlinePaymentMethod" name="onlinePaymentMethod">
+                <option value="creditCard">Credit Card</option>
+                <option value="debitCard">Debit Card</option>
+            </select>
+
+            <div id="cardDetails" style="display: none;">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber" placeholder="Enter card number">
+
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY">
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" placeholder="Enter CVV">
+            </div>
+        </div>
+
+        <button type="button" onclick="processPayment()">Proceed to Payment</button>
+    </form>
+</div>
+
+<script>
+    function showPaymentOptions() {
+        var paymentMode = document.getElementById('paymentMode').value;
+        var onlinePaymentOptions = document.getElementById('onlinePaymentOptions');
+        var cardDetails = document.getElementById('cardDetails');
+        var upiDetails = document.getElementById('upiDetails');
+
+        if (paymentMode === 'online') {
+            onlinePaymentOptions.style.display = 'block';
+            cardDetails.style.display = 'block';
+            upiDetails.style.display = 'none';
+        } else if (paymentMode === 'upi') {
+            onlinePaymentOptions.style.display = 'none';
+            cardDetails.style.display = 'none';
+            upiDetails.style.display = 'block';
+        } else {
+            onlinePaymentOptions.style.display = 'none';
+            cardDetails.style.display = 'none';
+            upiDetails.style.display = 'none';
+        }
+    }
+
+    function processPayment() {
+        var paymentMode = document.getElementById('paymentMode').value;
+
+        if (paymentMode === 'cash') {
+            var randomID = generateRandomID();
+            alert('Your payment ID is: ' + randomID + '. Please pay with cash at the counter. Enjoy your movie!');
+        } else if (paymentMode === 'upi') {
+            var upiID = document.getElementById('upiID').value;
+            if (upiID.trim() !== '') {
+                alert('Payment successful! Enjoy your movie with UPI: ' + upiID);
+            } else {
+                alert('UPI ID is required for payment.');
+            }
+        } else {
+            var cardNumber = document.getElementById('cardNumber').value;
+            var expiryDate = document.getElementById('expiryDate').value;
+            var cvv = document.getElementById('cvv').value;
+
+            // You can add validation and payment processing logic for card payments here
+            alert('Payment successful! Enjoy your movie with your ' + paymentMode + '!');
+        }
+    }
+
+    function generateRandomID() {
+        return Math.random().toString(36).substr(2, 9).toUpperCase(); // Random alphanumeric ID
+    }
+</script>
+
+</body>
+</html>

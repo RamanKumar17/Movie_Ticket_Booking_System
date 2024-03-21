@@ -2,27 +2,33 @@
 # Movie Booking System
 
 ## Overview
+
 The Movie Booking System is a console-based application developed in Core Java with JDBC for MySQL database connectivity. It allows users to book movie tickets, make payments, and receive ticket receipts via email. The system also provides admin functionalities such as managing movies, theaters, and viewing transaction details.
 
 ## Key Features
+
 ### For Admin:
+
 - **Manage Movies**: Add, edit, or delete movie details.
 - **Manage Theaters**: Add, edit, or delete theater details.
 - **View Transaction Details**: View transaction history and details.
 
 ### For User:
+
 - **Select Movie**: Browse available movies and select desired ones.
 - **Book Ticket**: Reserve seats for selected movies and make payments.
 - **Apply Coupon Code**: Apply coupon codes for discounts on ticket bookings.
 - **Generate Ticket Receipt**: Receive a PDF ticket receipt via email after successful booking.
 
 ## Installation
+
 1. Clone the repository:
    ```
    bash
    git clone https://github.com/RamanKumar17/Movie_Ticket_Booking_System.git
    ```
    ## Installation
+   
 1. **Import the project into your Java IDE (Eclipse, IntelliJ, etc.).**
 2. **Set up MySQL database:**
    - Create a database named `MovieTicketBooking`.
@@ -32,6 +38,7 @@ The Movie Booking System is a console-based application developed in Core Java w
 4. **Build and run the application from your IDE.**
 
 ## Usage
+
 1. **Launch the application.**
 2. **Choose whether to login as an admin or user.**
    - If logging in as admin:
@@ -43,10 +50,41 @@ The Movie Booking System is a console-based application developed in Core Java w
      - Receive a PDF ticket receipt via email after successful booking.
 
 ## Dependencies
+
 - Java Development Kit (JDK)
 - MySQL Server
 - MySQL Connector/J (JDBC driver)
 
 ## ScreenShots 
-- Tittle
-![Login Screen Dempo](readme-screenshots/imgname.png)
+
+- LoginPage
+  
+![Login Screen Dempo](Screenshots/loginPage.png)
+
+- DisplayDetails
+  
+![Display Details Demo](Screenshots/DisplayDetails.png)
+
+- BookingProcess
+  
+![Booking Process Demo](Screenshots/BookingProcess.png)
+
+- SelectedDetails
+  
+![Selected Details Dempo](Screenshots/SelectedDetails.png)
+
+- PaymentProcessing
+  
+![Payment Processing Dempo](Screenshots/PaymentProcessing.png)
+
+- CouponCode
+  
+![Coupon Code Dempo](Screenshots/CouponCode.png)
+
+- ModeOfPayment
+  
+![Mode Of Payment Dempo](Screenshots/ModeOfPayment.png)
+
+- LoginPage
+  
+![Ticket Booked Dempo](Screenshots/TicketBooked.png)

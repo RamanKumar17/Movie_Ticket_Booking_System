@@ -105,16 +105,16 @@ This frontend repository serves as the user interface component of Movie_Ticket_
 
 - LoginPage
   
-![Ticket Booked Dempo](Screenshots/TicketBooked.png)
+![LoginPage](Screenshots/inndex.png)
 
-- LoginPage
+- Admin Control Page
   
-![Ticket Booked Dempo](Screenshots/TicketBooked.png)
+![AdminControl](Screenshots/AdminControl.png)
 
-- LoginPage
+- SelectMovies Page
   
-![Ticket Booked Dempo](Screenshots/TicketBooked.png)
+![SelectMovies](Screenshots/SelectMovies.png)
 
-- LoginPage
+- Payment Page
   
-![Ticket Booked Dempo](Screenshots/TicketBooked.png)
+![Paymentt](Screenshots/Paymentt.png)
